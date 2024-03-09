@@ -5,14 +5,14 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'public'),
         filename: 'bundle.js',
-        publicPath: '/public'
+        publicPath: '/'
     },
     mode: 'production',
     module: {
         rules: [
             {
                 test: /\.css$/i,
-			    use: ["css-loader", "style-loader"],
+			    use: ["style-loader", "css-loader"],
 		    },
             {
                 test: /\.(gif|png|jpe?g|svg)$/i,
