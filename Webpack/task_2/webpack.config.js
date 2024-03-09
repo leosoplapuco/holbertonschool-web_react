@@ -5,28 +5,28 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'public'),
         filename: 'bundle.js',
-        publicPath: '/'
+        publicPath: '/public'
     },
     mode: 'production',
     module: {
         rules: [
             {
                 test: /\.css$/i,
-			    use: ["style-loader", "css-loader"],
-		    },
-            {
+                use: ["css-loader", "style-loader"],
+            },
+		    {
                 test: /\.(gif|png|jpe?g|svg)$/i,
-			    use: [
+                use: [
                     "file-loader",
                     {
                         loader: "image-webpack-loader",
-					    options: {
-                            bypassingOnDebug: true,
-                            disable: true,
-					    },
-				    },
-			    ],
-		    },
-	    ],
+                        options: {
+							bypassingOnDebug: true,
+							disable: true,
+                        },
+                    },
+                ],
+            },
+        ],
     },
 };
