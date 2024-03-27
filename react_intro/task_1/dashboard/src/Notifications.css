@@ -1,4 +1,5 @@
 .Notifications{
     border: 3px solid var(--red);
-    padding: 10px 20px;
+    border-style: dashed;
+    padding: 20px;
 }

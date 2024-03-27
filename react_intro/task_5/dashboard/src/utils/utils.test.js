@@ -1,4 +1,5 @@
 import { getFullYear, getFooterCopy, getLatestNotification } from "./utils";
+import '@testing-library/jest-dom';
 
 describe("utils_tests", function () {
     describe("getFullYear", function () {

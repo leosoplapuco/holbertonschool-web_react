@@ -1,6 +1,6 @@
-// Notifications.test.js
 import React from 'react';
 import { render } from '@testing-library/react';
+import '@testing-library/jest-dom';
 import Notifications from './Notifications';
 
 describe('Notifications Component', () => {
