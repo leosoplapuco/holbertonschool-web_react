@@ -2,6 +2,12 @@ import React from "react";
 import PropTypes from 'prop-types';
 import CourseListRow from "./CourseListRow";
 import { StyleSheet, css } from 'aphrodite';
+import { StyleSheetTestUtils } from 'aphrodite';
+
+beforeEach(() => {
+  StyleSheetTestUtils.suppressStyleInjection();
+});
+
 
 const styles = StyleSheet.create({
     'table':{
