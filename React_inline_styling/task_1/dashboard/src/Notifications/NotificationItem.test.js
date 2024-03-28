@@ -1,6 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import NotificationItem from './NotificationItem';
+import { StyleSheetTestUtils } from 'aphrodite';
+
+beforeEach(() => {
+    StyleSheetTestUtils.suppressStyleInjection();
+});
 
 describe('NotificationItem Component', () => {
     it('should render the correct HTML with dummy HTML prop', () => {

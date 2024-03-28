@@ -1,6 +1,11 @@
 import React from "react";
 import { shallow } from 'enzyme';
 import BodySection from "./BodySection";
+import { StyleSheetTestUtils } from 'aphrodite';
+
+beforeEach(() => {
+    StyleSheetTestUtils.suppressStyleInjection();
+});
 
 describe('the label <BodySection />', () => {
     it('render correctly whith children and h2 element', () => {

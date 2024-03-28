@@ -2,6 +2,11 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Notifications from './Notifications';
+import { StyleSheetTestUtils } from 'aphrodite';
+
+beforeEach(() => {
+    StyleSheetTestUtils.suppressStyleInjection();
+});
 
 describe('Notifications Component', () => {
     test('renders without crashing', () => {
