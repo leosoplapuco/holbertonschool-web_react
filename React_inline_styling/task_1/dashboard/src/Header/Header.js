@@ -1,6 +1,11 @@
 import React from 'react';
 import Logo from '../assets/holberton-logo.jpg';
 import { StyleSheet, css } from 'aphrodite';
+import { StyleSheetTestUtils } from 'aphrodite';
+
+beforeEach(() => {
+    StyleSheetTestUtils.suppressStyleInjection();
+});
 
 const styles = StyleSheet.create({
     '.App-header':{
