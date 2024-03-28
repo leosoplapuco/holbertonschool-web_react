@@ -2,6 +2,11 @@ import React from "react";
 import { shallow } from "enzyme";
 import BodySectionWithMarginBottom from "./BodySectionWithMarginBottom";
 import BodySection from "./BodySection";
+import { StyleSheetTestUtils } from 'aphrodite';
+
+beforeEach(() => {
+  StyleSheetTestUtils.suppressStyleInjection();
+});
 
 describe('The label <BodySectionWithMarginBottom/>', () => {
     it('render correctly with BodySection component and props passed correctly', () => {
