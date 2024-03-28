@@ -5,7 +5,7 @@ import BodySection from "./BodySection";
 import { StyleSheetTestUtils } from 'aphrodite';
 
 beforeEach(() => {
-  StyleSheetTestUtils.suppressStyleInjection();
+    StyleSheetTestUtils.suppressStyleInjection();
 });
 
 describe('The label <BodySectionWithMarginBottom/>', () => {
