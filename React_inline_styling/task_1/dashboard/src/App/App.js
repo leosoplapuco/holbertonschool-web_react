@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     root:{
         '--red': '#e11c3e',
     },
-    body:{
+    'body':{
         margin: 0,
         padding: 0,
     },
@@ -36,6 +36,9 @@ const styles = StyleSheet.create({
     appFooter: {
         textAlign: 'center',
         borderTop: '3px solid var(--red)',
+    },
+    'footer':{
+        'background':'red',
     }
 });
 
