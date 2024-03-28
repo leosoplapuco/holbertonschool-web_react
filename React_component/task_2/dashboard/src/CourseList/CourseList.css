@@ -1,0 +1,30 @@
+table{
+    border: 2px solid gray;
+}
+
+#CourseList{
+    width: 100%;
+    text-align: left;
+    border: 2px solid gray;
+    border-collapse: collapse;
+}
+
+#CourseList caption{
+    font-size: 18px;
+    border: 2px solid gray;
+    border-bottom: 0;
+    padding: 10px;
+}
+
+#CourseList tbody{
+    padding: 10px;
+    border-top: 2px solid gray;
+}
+
+th, td{
+    padding: 10px;
+}
+
+th{
+    font-size: 17px;
+}
