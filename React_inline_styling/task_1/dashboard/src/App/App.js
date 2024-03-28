@@ -11,11 +11,15 @@ import BodySection from '../BodySection/BodySection';
 import WithLogging from '../HOC/WithLogging';
 
 const styles = StyleSheet.create({
-    root: {
+    '*':{
+        margin: 0,
+        padding: 0,
+        'box-sizing': 'border-box',
+    },
+    root:{
         '--red': '#e11c3e',
     },
     body:{
-        boxSizing: 'border-box',
         margin: 0,
         padding: 0,
     },
@@ -23,16 +27,15 @@ const styles = StyleSheet.create({
         display: 'flex',
         flexDirection: 'row-reverse',
         justifyContent: 'space-between',
-        padding: '10px 20px',
-        borderBottom: '4px solid var(--red)',
+        borderBottom: '3px solid var(--red)',
     },
-    appBody:{
+    appBody: {
         marginTop: '20px',
         marginLeft: '40px',
     },
-    appFooter:{
+    appFooter: {
         textAlign: 'center',
-        borderTop: '4px solid var(--red)',
+        borderTop: '3px solid var(--red)',
     }
 });
 

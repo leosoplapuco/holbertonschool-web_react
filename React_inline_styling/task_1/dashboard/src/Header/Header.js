@@ -14,19 +14,16 @@ const styles = StyleSheet.create({
         'width': 'auto',
         'height': '200px',
     },
-    'h1':{
-        'font-size': '35px',
-        'color': 'var(--red)',
-    },
     appHeader:{
         display: 'flex',
         alignItems: 'center',
     },
     appHeaderImg:{
-        width: '220px',
+        width: 'auto',
+        height: '200px',
     },
     appHeaderH1:{
-        fontSize: '40px',
+        fontSize: '35px',
         color: 'var(--red)',
     }
 })

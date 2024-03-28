@@ -43,6 +43,18 @@ const styles = StyleSheet.create({
     paragraph: {
         marginTop: '-4px',
     },
+    'li[data-notification-type="default"]':{
+        color: 'blue',
+    },
+    'li[data-notification-type="urgent"]':{
+        color: 'var(--red)',
+    },
+    '.Notifications .notification-item[data-notification-type="urgent"]':{
+        color: 'var(--red)',
+    },
+    '.Notifications .notification-item[data-notification-type="default"]':{
+      color: 'blue',
+    }
 });
 
 class Notifications extends Component {
