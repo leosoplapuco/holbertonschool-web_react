@@ -1,5 +1,12 @@
 import React from "react";
 import PropTypes from 'prop-types';
+import { StyleSheet } from 'aphrodite';
+
+const styles = StyleSheet.create({
+    body:{
+        'display':'unset',
+    }
+})
 
 const CourseListRow = ({ isHeader = false, textFirstCell, textSecondCell = null }) => {
     if (isHeader){

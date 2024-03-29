@@ -1,30 +1,25 @@
-import React from "react";
-import PropTypes from 'prop-types';
-import { StyleSheet } from 'aphrodite';
+import React from 'react';
+import { shallow } from 'enzyme';
+import NotificationItem from './NotificationItem';
+import { StyleSheetTestUtils } from 'aphrodite';
 
-const CourseListRow = ({ isHeader = false, textFirstCell, textSecondCell = null }) => {
-    if (isHeader) {
-        return (
-            <tr style={{backgroundColor: '#deb5b545'}}>
-                <th>{textFirstCell}</th>
-                <th>{textSecondCell}</th>
-            </tr>
-        );
-    }
-    else{
-        return (
-            <tr style={{backgroundColor: '#f5f5f5ab'}}>
-                <td>{textFirstCell}</td>
-                <td>{textSecondCell}</td>
-            </tr>
-        );
-    }
-};
+beforeEach(() => {
+    StyleSheetTestUtils.suppressStyleInjection();
+});
 
-CourseListRow.propTypes = {
-    isHeader: PropTypes.bool,
-    textFirstCell: PropTypes.string.isRequired,
-    textSecondCell: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-export default CourseListRow;
+describe('NotificationItem Component', () => {
+    it('should render the correct HTML with dummy HTML prop', () => {
+        const htmlProp = { __html: '<u>test</u>' };
+        const wrapper = shallow(<NotificationItem type="default" html={htmlProp} />);
+        expect(wrapper.find('li.notification-item').prop('data-notification-type')).toEqual('default');
+        expect(wrapper.find('li.notification-item div').prop('dangerouslySetInnerHTML')).toEqual(htmlProp);
+        expect(wrapper.find('li.notification-item span')).toHaveLength(0);
+    });
+  
+    it('should render the correct HTML without dummy HTML prop', () => {
+        const wrapper = shallow(<NotificationItem type="default" value="Test Value" />);
+        expect(wrapper.find('li.notification-item').prop('data-notification-type')).toEqual('default');
+        expect(wrapper.find('li.notification-item span').text()).toEqual('Test Value');
+        expect(wrapper.find('li.notification-item div')).toHaveLength(0);
+    });
+});
