@@ -1,7 +1,9 @@
 import React from "react";
 import PropTypes from 'prop-types';
+import { StyleSheet } from 'aphrodite';
+
 const CourseListRow = ({ isHeader = false, textFirstCell, textSecondCell = null }) => {
-    if (isHeader){
+    if (isHeader) {
         return (
             <tr style={{backgroundColor: '#deb5b545'}}>
                 <th>{textFirstCell}</th>
