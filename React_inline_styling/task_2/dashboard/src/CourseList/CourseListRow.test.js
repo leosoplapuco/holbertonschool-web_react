@@ -1,11 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
 import CourseListRow from "./CourseListRow";
-import { StyleSheetTestUtils } from 'aphrodite';
-
-beforeEach(() => {
-    StyleSheetTestUtils.suppressStyleInjection();
-});
 
 describe('CourseListRow Component', () => {
     describe('When isHeader is true', () => {
